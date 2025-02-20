@@ -60,12 +60,6 @@ const copyToClipboard = async () => {
     ElMessage.error('Failed to copy color code')
   }
 }
-
-const presetColors = [
-  '#FF6B6B', '#4ECDC4', '#45B7D1',
-  '#96CEB4', '#FFEEAD', '#D4A5A5',
-  '#9B59B6', '#3498DB', '#2ECC71'
-]
 </script>
 
 <template>
@@ -89,9 +83,7 @@ const presetColors = [
             v-model="inputColor"
             class="hex-input"
             @change="validateAndUpdateColor"
-          >
-            <template #prefix>#</template>
-          </el-input>
+          />
         </div>
       </div>
 
@@ -115,25 +107,11 @@ const presetColors = [
             :model-value="outputColor"
             readonly
             class="hex-input"
-          >
-            <template #prefix>#</template>
-          </el-input>
+          />
         </div>
       </div>
     </div>
 
-    <div class="preset-section">
-      <h3>Preset Colors</h3>
-      <div class="preset-colors">
-        <button
-          v-for="color in presetColors"
-          :key="color"
-          class="preset-color"
-          :style="{ backgroundColor: color }"
-          @click="handleColorChange(color)"
-        />
-      </div>
-    </div>
   </div>
 </template>
 
