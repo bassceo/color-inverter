@@ -125,6 +125,3 @@ This showcases how you can write and manage reactive state with Vue 3 and TypeSc
 This project is open-sourced under the [MIT License](LICENSE). Feel free to use, modify, and distribute it as you wish.
 
 ---
-
-**Happy Coding!**
-```
